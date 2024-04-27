@@ -23,10 +23,10 @@ fi
 [[ -f $CONFIG_DIR/package.json ]] || cp install/package.json $CONFIG_DIR/package.json
 [[ -f $CONFIG_DIR/package-lock.json ]] || touch $CONFIG_DIR/package-lock.json
 
-ln -fs $CONFIG_DIR/package.json package.json
-ln -fs $CONFIG_DIR/package-lock.json package-lock.json
+#ln -fs $CONFIG_DIR/package.json package.json
+#ln -fs $CONFIG_DIR/package-lock.json package-lock.json
 
-npm install --omit=dev
+#npm install --omit=dev
 
 if [[ -n $SETUP ]]; then
   echo "Setup environmental variable detected"
